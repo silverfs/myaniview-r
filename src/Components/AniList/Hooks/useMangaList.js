@@ -15,7 +15,7 @@ const GET_MANGA = gql`
     }
   }
 }
-`;
+`
 
 export const useMangaList = () => {
     const { error, data, loading } = useQuery(GET_MANGA);
