@@ -1,3 +1,4 @@
+[![Docker](https://github.com/silverfs/myaniview-r/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/silverfs/myaniview-r/actions/workflows/docker-publish.yml)
 # MyAniView-R - A personal view on your tracklists!
 
 
