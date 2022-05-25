@@ -9,9 +9,10 @@ query GetManga($id: Int!)
     title {
       romaji
       english
+      native
     }
     coverImage {
-      medium
+      extraLarge
     }
     description
     chapters
@@ -22,6 +23,16 @@ query GetManga($id: Int!)
     }
     status
     synonyms
+    startDate {
+      year
+      month
+      day
+    }
+    isFavourite
+    countryOfOrigin
+    format
+    countryOfOrigin
+    genres
   }
 }
 `
