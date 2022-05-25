@@ -1,24 +1,28 @@
 import { useQuery, gql } from '@apollo/client'
 
 const GET_PROFILE = gql`
-query {
-    User (search: "SilverFS") {
-        id
-        name
-        about
-        avatar {
-            large
-            medium
-        }
-        bannerImage
+query GetProfile($userName: String!)
+{
+User (search: $userName) {
+    id
+    name
+    about
+    avatar {
+        large
+        medium
+    }
+    bannerImage
+    updatedAt
     }
 }
 `;
 
-export const useProfile = () => {
-    const { error, data, loading } = useQuery(GET_PROFILE);
-    // dir > log for non-string console messages.
-    //console.dir({ error, loading, data });
+export const useProfile = (userName) => {
+    const { error, data, loading } = useQuery(GET_PROFILE, {
+        variables: {
+            userName,
+        }
+    });
 
     return {
         error,
@@ -26,5 +30,5 @@ export const useProfile = () => {
         loading,
     }
 
-    
+
 }

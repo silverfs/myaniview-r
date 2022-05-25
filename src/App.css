@@ -1,4 +1,14 @@
-/* .App {
-  max-width: 70rem;
-  margin: 10rem auto;
-} */
+.navbg {
+  background-color: rgba(35,38,67,0.8);
+}
+
+.navbg Nav:hover {
+  background-color: rgb(46, 56, 73) !important;
+  color: #ffffff;
+}
+
+/* MAIN */
+
+.App {
+  background-color: rgb(24, 45, 61);
+}

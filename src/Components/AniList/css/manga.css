@@ -1,0 +1,35 @@
+.manga {
+    position: bottom;
+    display:inline-block;
+    align-items: flex-end;
+    
+    color: white;
+    border-radius: 5vw;
+    padding-right: 10vw;
+    padding-left: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 0vw;
+}
+
+.coverImg {
+    border-radius: 1vh;
+    float: left;
+    margin-top: 5vh;
+    height: 20vh;
+}
+
+h3, h4 {
+    float: right;
+    text-shadow: 0 0 10px #000000, 0 0 5px #000000;
+    text-align: left;
+}
+
+.jumboBanner {
+    background-color: #0d1117;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: '50% 35%';
+    height: '330vh';
+    display: 'flex';
+    width: 100%;
+}

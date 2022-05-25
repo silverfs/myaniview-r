@@ -4,8 +4,8 @@ import { useQuery, gql } from '@apollo/client'
 const GET_CURRENT_MANGA = gql`
 query GetCurrentManga($userName: String!)
     {
-    Page(perPage: 10){
-        mediaList(userName: $userName, status: CURRENT, type: MANGA) {
+    Page(perPage: 20){
+        mediaList(userName: $userName, status: CURRENT, type: MANGA, sort: UPDATED_TIME_DESC) {
             media {
                 id
                 title {
