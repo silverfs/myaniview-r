@@ -1,4 +1,5 @@
 import './App.css';
+import logo from './logo.png';
 import React from 'react'
 import { Route, Routes } from 'react-router'
 import Navbar from 'react-bootstrap/Navbar'
@@ -13,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <Navbar className='navbg' variant='dark' fixed='top' expand='md'>
-        <Navbar.Brand href='/'>MAV</Navbar.Brand>
+        <Navbar.Brand href='/'>
+          <img src={logo} alt='logo' className='logoMav' />
+        </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav>
