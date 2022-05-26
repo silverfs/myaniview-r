@@ -17,10 +17,10 @@ export default function CurrentManga() {
       {data.Page.mediaList.map(manga => {
         return <Card className='p-0 mb-2 col-2 cardB' key={manga.media.id}>
           <Link to={`/manga/${manga.media.id}`}>
-              <Card.Img variant="top" src={manga.media.coverImage.medium} alt='coverImage' className='cardImage'/>
-            </Link>
-          </Card>
+            <Card.Img variant="top" src={manga.media.coverImage.medium} alt='coverImage' />
+          </Link>
+        </Card>
       })}
-  </CardColumns>
+    </CardColumns>
   </Container >
 }
