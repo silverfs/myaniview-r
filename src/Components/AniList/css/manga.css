@@ -6,30 +6,48 @@
     color: white;
     border-radius: 5vw;
     padding-right: 10vw;
-    padding-left: 3vw;
+    padding-left: 12vw;
+    padding-top: 1vw;
+    padding-bottom: 0vw;
+}
+
+.stats {
+    position: bottom;
+    display:inline-block;
+    align-items: flex-end;
+    
+    color: white;
+    border-radius: 5vw;
+    padding-right: 10vw !important;
+    padding-left: 12vw;
     padding-top: 1vw;
     padding-bottom: 0vw;
 }
 
 .coverImg {
-    border-radius: 1vh;
-    float: left;
-    margin-top: 5vh;
-    height: 20vh;
+    border-top-left-radius: calc(0.25rem - 1px) !important;
+    border-top-right-radius: calc(0.25rem - 1px) !important;
+    border-bottom-left-radius: calc(0.25rem - 1px) !important;
+    border-bottom-right-radius: calc(0.25rem - 1px) !important;
+    height: 24rem !important;
+    margin-right: 2vh !important;
 }
 
-h3, h4 {
+.inStats {
+    padding-right: 6vw !important;
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
+    padding-left: 1vw !important;
+}
+
+.description {
+    padding-right: 2vw !important;
+    padding-top: 2vh !important;
+    padding-left: 6vw !important;
+}
+
+.coverText {
     float: right;
     text-shadow: 0 0 10px #000000, 0 0 5px #000000;
     text-align: left;
-}
-
-.jumboBanner {
-    background-color: #0d1117;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: '50% 35%';
-    height: '330vh';
-    display: 'flex';
-    width: 100%;
 }

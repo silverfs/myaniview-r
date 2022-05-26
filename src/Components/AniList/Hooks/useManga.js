@@ -33,6 +33,7 @@ query GetManga($id: Int!)
     format
     countryOfOrigin
     genres
+    source
   }
 }
 `
