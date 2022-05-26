@@ -15,9 +15,9 @@ export default function CurrentManga() {
   return <Container className="CurrentManga mt-5 mb-3">
     <CardColumns className='row cardBundle p-2 mt-5 rounded p-3 shadow-lg'>
       {data.Page.mediaList.map(manga => {
-        return <Card className='p-0 mb-2 col-2' key={manga.media.id}>
+        return <Card className='p-0 mb-2 col-2 cardB' key={manga.media.id}>
           <Link to={`/manga/${manga.media.id}`}>
-              <Card.Img variant="top" src={manga.media.coverImage.medium} alt='coverImage' />
+              <Card.Img variant="top" src={manga.media.coverImage.medium} alt='coverImage' className='cardImage'/>
             </Link>
           </Card>
       })}
