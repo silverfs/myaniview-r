@@ -1,5 +1,7 @@
 .navbg {
   background-color: rgba(35,38,67,0.8);
+  height: 4rem;
+  min-height: 3rem;
 }
 
 .navbg Nav:hover {
@@ -7,8 +9,6 @@
   color: #ffffff;
 }
 
-/* MAIN */
-
-.App {
-  background-color: rgb(24, 45, 61);
+.logoMav {
+  width: 4rem;
 }

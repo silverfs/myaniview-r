@@ -18,7 +18,7 @@ export default function Profile() {
   const source = data.User.about;
   
 
-  return <Container fluid key={data.User.id} className='Profile p-0'>
+  return <Container fluid key={data.User.id} className='p-0'>
     <Jumbotron className='profileBanner' style={{ backgroundImage: `url('${data.User.bannerImage}')`}}>
       <div className='mt-5 profile'>
         <img className='pfp' src={data.User.avatar.medium} alt='pfp' />

@@ -4,17 +4,17 @@
     align-items: flex-end;
     
     color: white;
-    border-radius: 5vw;
-    padding-right: 10vw;
-    padding-left: 3vw;
-    padding-top: 1vw;
-    padding-bottom: 0vw;
+    border-radius: 5rem;
+    padding-right: 10rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
 }
 
 .pfp {
-    border-radius: 10vh;
+    border-radius: 10rem;
     float: left;
-    margin-top: 5vh;
+    margin-top: 2rem;
 }
 
 h3 {
@@ -26,7 +26,7 @@ h3 {
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: '50% 35%';
-    height: '330vh';
+    height: '330rem';
     display: 'flex';
     width: 100%;
 }
