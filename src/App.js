@@ -10,6 +10,7 @@ import Profile from './Components/AniList/pages/profile'
 import MangaList from './Components/AniList/pages/mangaList'
 import CurrentManga from './Components/AniList/pages/currentManga';
 import NotFound from './Components/AniList/pages/notFound';
+import Dashboard from './Components/AniList/pages/dashboard';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
         <Route strict exact path='/current/manga/:userName' element={<CurrentManga />} />
         <Route strict exact path='/manga/:id' element={<Manga />} />
         <Route strict exact path='/mav/login' element={<Login />} />
-        <Route strict exact path='/mav' />
+        <Route strict exact path='/mav' element={<Dashboard />} />
         {/* 404 PAGE */}
         <Route path='*' element={<NotFound />} />
       </Routes>
