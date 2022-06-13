@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './logo.png';
 import React from 'react'
+import Login from './Components/AniList/pages/login';
 import { Route, Routes } from 'react-router'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav';
@@ -30,6 +31,8 @@ function App() {
         <Route strict exact path='/manga' element={<MangaList />} />
         <Route strict exact path='/current/manga/:userName' element={<CurrentManga />} />
         <Route strict exact path='/manga/:id' element={<Manga />} />
+        <Route strict exact path='/mav/login' element={<Login />} />
+        <Route strict exact path='/mav' />
         {/* 404 PAGE */}
         <Route path='*' element={<NotFound />} />
       </Routes>
