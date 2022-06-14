@@ -6,9 +6,11 @@ import CardColumns from 'react-bootstrap/CardColumns';
 import Spinner from 'react-bootstrap/Spinner';
 import { useCurrentManga } from '../Hooks/useCurrentManga';
 import '../css/currentManga.css';
+import { useUserUpdate } from '../Hooks/useUserUpdate';
 
 export default function CurrentManga() {
-  const { error, loading, data } = useCurrentManga("SilverFS");
+  const { anilistname } = useUserUpdate();
+  const { error, loading, data } = useCurrentManga(anilistname);
   if (loading) return <Spinner animation="grow" />;
   if (error) return <div>Whoops! Something went wrong...</div>;
 

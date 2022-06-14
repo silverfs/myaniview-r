@@ -8,10 +8,12 @@ import CurrentManga from './currentManga';
 import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useUserUpdate } from '../Hooks/useUserUpdate';
 
 
 export default function Profile() {
-  const { error, loading, data } = useProfile("SilverFS");
+  const { anilistname } = useUserUpdate();
+  const { error, loading, data } = useProfile(anilistname);
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (error) return <div>Whoops! Something went wrong...</div>
 
