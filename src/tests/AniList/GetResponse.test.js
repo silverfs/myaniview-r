@@ -1,5 +1,5 @@
 import { GraphQL } from './graphql';
 
-test('getAllUsersFromApi', () => {
+test('getResponseFromAnilist', () => {
     expect(GraphQL()).toBeDefined();
 })
