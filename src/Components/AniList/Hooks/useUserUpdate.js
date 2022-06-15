@@ -8,19 +8,21 @@ export const useUserUpdate = () => {
     const [anilistname, setAnilistname] = useState('');
 
     useEffect(() => {
-        getUser();
-    })
-    function getUser() {
-        fetch(LOGIN_URL).then((result) => {
-            result.json().then((resp) => {
-                setUsername(resp.username)
-                setPassword(resp.password)
-                setAnilistname(resp.anilistname)
+        const getUser = () => {
+            fetch(LOGIN_URL).then((result) => {
+                result.json().then((resp) => {
+                    setUsername(resp.username)
+                    setPassword(resp.password)
+                    setAnilistname(resp.anilistname)
+                })
             })
-        })
-    }
+        }
+        getUser();
+    }, [LOGIN_URL])
+    
     function setUpdateUser() {
         let item = {username, password, anilistname}
+        //console.warn('item', item)
         fetch(LOGIN_URL, {
             method: 'PUT',
             headers : {
@@ -30,7 +32,6 @@ export const useUserUpdate = () => {
             body:JSON.stringify(item)
         }).then((result) => {
             result.json().then((resp) => {
-                getUser()
                 window.location.reload();
             })
         })
