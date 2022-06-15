@@ -5,23 +5,26 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './context/AuthProvider'
 import 'bootstrap/dist/css/bootstrap.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 const client = new ApolloClient({
-  uri: "https://graphql.anilist.co",
+  uri: process.env.REACT_APP_ANILIST_URL,
   cache: new InMemoryCache()
 })
 
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ApolloProvider client={client}>
-        <App />
-      </ApolloProvider>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <ApolloProvider client={client}>
+          <App />
+        </ApolloProvider>
+      </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>
 );
 

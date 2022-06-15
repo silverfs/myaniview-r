@@ -1,24 +1,21 @@
 import { React } from 'react';
 import '../css/profile.css';
-import MarkdownPreview from '@uiw/react-markdown-preview';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import { useProfile } from '../Hooks/useProfile';
-import CurrentManga from './currentManga';
 import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import UserUpdate from './userUpdate';
 import { useUserUpdate } from '../Hooks/useUserUpdate';
 
 
-export default function Profile() {
-  const { anilistname } = useUserUpdate();
+export default function Dashboard() {
+  const { username, anilistname } = useUserUpdate();
   const { error, loading, data } = useProfile(anilistname);
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (error) return <div>Whoops! Something went wrong...</div>
 
-  const source = data.User.about;
-  
 
   return <Container fluid key={data.User.id} className='p-0'>
     <Jumbotron className='profileBanner' style={{ backgroundImage: `url('${data.User.bannerImage}')`}}>
@@ -30,10 +27,10 @@ export default function Profile() {
     <Container>
       <Row>
         <Col>
-          <MarkdownPreview source={source} className='mt-5 rounded p-3 shadow-lg' />
+            <h2>Welcome, <b>{username}!</b></h2>
         </Col>
         <Col>
-          <CurrentManga />
+          <UserUpdate />
         </Col>
       </Row>
     </Container>
